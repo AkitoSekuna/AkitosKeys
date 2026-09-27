@@ -1,0 +1,209 @@
+reward-command: "dc givekey {player} weekly 1"
+received: "&aВы получили бесплатный &eЕженедельный ключ&a!"
+cooldown: "&cВы уже забрали еженедельный ключ! Возвращайтесь через &e{time}&c."
+players-only: "&cЭту команду могут использовать только игроки."
+error: "&cПроизошла ошибка. Обратитесь к администрации."
+
+
+# ========================================
+# KEY SHOP
+# ========================================
+
+shop:
+  title: "&0&l✦ Магазин ключей ✦"
+  size: 27
+
+  decorations:
+
+    background:
+      slots: [0, 1, 2, 6, 7, 8, 9, 17, 18, 19, 20, 24, 25, 26]
+      material: BLACK_STAINED_GLASS_PANE
+      display-name: " "
+
+    accent:
+      slots: [3, 4, 5, 10, 12, 14, 16, 21, 22, 23]
+      material: YELLOW_STAINED_GLASS_PANE
+      display-name: " "
+
+  items:
+
+    weekly:
+      slot: 11
+      material: TRIAL_KEY
+      price: 50.0
+      display-name: "&e&l✦ Еженедельный ключ ✦"
+      command: "dc givekey {player} weekly 1"
+      lore:
+        - ""
+        - "&7Получите шанс открыть"
+        - "&7еженедельный кейс!"
+        - ""
+        - "&7Цена: &e&l{price} PX"
+        - ""
+        - "&e▶ &fНажмите для покупки!"
+
+    pets:
+      slot: 13
+      material: CREEPER_SPAWN_EGG
+      price: 150.0
+      display-name: "&d&l✦ Ключ питомцев ✦"
+      command: "dc givekey {player} pets 1"
+      lore:
+        - ""
+        - "&7Откройте &dКейс питомцев&7"
+        - "&7и пополните свою коллекцию!"
+        - ""
+        - "&7Цена: &e&l{price} PX"
+        - ""
+        - "&d▶ &fНажмите для покупки!"
+
+    privileges:
+      slot: 15
+      material: OMINOUS_TRIAL_KEY
+      price: 500.0
+      display-name: "&c&l✦ Ключ привилегий ✦"
+      command: "dc givekey {player} privileges 1"
+      lore:
+        - ""
+        - "&7Испытайте удачу в"
+        - "&cКейсе привилегий&7!"
+        - ""
+        - "&7Привилегия выдаётся"
+        - "&7на &e30 дней&7."
+        - ""
+        - "&7Цена: &e&l{price} PX"
+        - ""
+        - "&c▶ &fНажмите для покупки!"
+
+
+# ========================================
+# SHOP MESSAGES
+# ========================================
+
+messages:
+
+  purchased: "&aВы купили ключ за &e{price} PX&a!"
+  not-enough-money: "&cВам нужно &e{price} PX &cдля покупки!"
+  players-only: "&cЭту команду могут использовать только игроки!"
+  error: "&cПроизошла ошибка при выдаче ключа. Обратитесь к администрации."
+
+# ========================================
+# PROMO CODES
+# ========================================
+
+promos:
+
+  WELCOME:
+    enabled: true
+    reward-type: PX
+    amount: 25
+    max-uses: 0
+    uses: 0
+    expires: "2026-12-31"
+
+  FREEKEY:
+    enabled: true
+    reward-type: COMMAND
+    amount: 1
+    max-uses: 100
+    uses: 0
+    expires: "2026-12-31"
+    command: "dc givekey {player} weekly 1"
+
+
+# ========================================
+# PROMO MESSAGES
+# ========================================
+
+promo-messages:
+
+  usage: "&cИспользование: /promo <код>"
+  invalid: "&cТакого промокода не существует!"
+  disabled: "&cЭтот промокод больше не активен!"
+  expired: "&cСрок действия этого промокода истёк!"
+  no-uses: "&cЭтот промокод уже полностью использован!"
+  already-claimed: "&cВы уже использовали этот промокод!"
+  success: "&aПромокод &e{code} &aуспешно активирован!"
+  error: "&cПроизошла ошибка при использовании промокода!"
+  players-only: "&cЭту команду могут использовать только игроки!"
+
+
+# ========================================
+# PET COLLECTIONS
+# ========================================
+
+collections:
+
+  starter:
+    enabled: true
+    display-name: "&aНачальная коллекция"
+    repeatable: false
+
+    heads:
+      - "pats.pets.head.pug"
+      - "pats.pets.head.l-blue-sheep"
+      - "pats.pets.head.lime-sheep"
+      - "pats.pets.head.orange-sheep"
+      - "pats.pets.head.purple-sheep"
+
+    reward:
+      type: PX
+      amount: 100
+
+    completion-message: "&aВы собрали коллекцию &e{collection}&a и получили &e100 PX&a!"
+
+  rare:
+    enabled: true
+    display-name: "&9Редкая коллекция"
+    repeatable: false
+
+    heads:
+      - "pats.pets.head.dogo"
+      - "pats.pets.head.pigeon"
+      - "pats.pets.head.pufferfish"
+      - "pats.pets.head.bumblebee"
+      - "pats.pets.head.fly"
+      - "pats.pets.head.spider"
+
+    reward:
+      type: PX
+      amount: 250
+
+    completion-message: "&aВы собрали коллекцию &e{collection}&a и получили &e250 PX&a!"
+
+  epic:
+    enabled: true
+    display-name: "&5Эпическая коллекция"
+    repeatable: false
+
+    heads:
+      - "pats.pets.head.hello-kitty"
+      - "pats.pets.head.frog-pumpkin"
+      - "pats.pets.head.duolingo"
+      - "pats.pets.head.phantom"
+      - "pats.pets.head.rainbow-sheep"
+
+    reward:
+      type: PX
+      amount: 500
+
+    completion-message: "&dВы собрали коллекцию &e{collection}&d и получили &e500 PX&d!"
+
+  legendary:
+    enabled: true
+    display-name: "&6Легендарная коллекция"
+    repeatable: false
+
+    heads:
+      - "pats.pets.head.demon"
+      - "pats.pets.head.angel"
+      - "pats.pets.head.eclipse"
+      - "pats.pets.head.nemesis"
+
+    reward:
+      type: COMMAND
+      command: "dc givekey {player} pets 1"
+
+    completion-message: "&6Вы собрали коллекцию &e{collection}&6 и получили особую награду!"
+
+  # You can add more collections here later.

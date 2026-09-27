@@ -1,0 +1,33 @@
+name: AkitosKeys
+version: 21.2.0
+main: com.akito_sekuna.keys.Main
+api-version: '1.21'
+author: Akito_Sekuna
+description: Weekly keys, key shop and promo codes.
+
+depend:
+  - AkitosCore
+
+commands:
+  wkey:
+    description: Получить бесплатный еженедельный ключ
+    usage: /wkey
+
+  weeklykey:
+    description: Основная команда WeeklyKey
+    aliases: [wk]
+    usage: /weeklykey reload
+    permission: weeklykey.admin
+
+  kshop:
+    description: Магазин ключей
+    usage: /kshop
+
+  promo:
+    description: Активировать промокод
+    usage: /promo <код>
+
+permissions:
+  weeklykey.admin:
+    description: Администрирование WeeklyKey
+    default: op
